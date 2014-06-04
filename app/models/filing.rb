@@ -13,5 +13,5 @@
 
 class Filing < ActiveRecord::Base
   belongs_to :stock
-  enum type: [ :10_k, :10_q]
+  enum type: [ :k10, :q10]
 end
