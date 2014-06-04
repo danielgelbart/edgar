@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Nam</th>
+      <th>Name</th>
       <th>Ticker</th>
       <th>Cik</th>
       <th colspan="3"></th>
@@ -13,7 +13,7 @@
   <tbody>
     <% @stocks.each do |stock| %>
       <tr>
-        <td><%= stock.nam %></td>
+        <td><%= stock.name %></td>
         <td><%= stock.ticker %></td>
         <td><%= stock.cik %></td>
         <td><%= link_to 'Show', stock %></td>

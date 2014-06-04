@@ -14,4 +14,8 @@
 class Filing < ActiveRecord::Base
   belongs_to :stock
   enum filing_type: [ :k10, :q10]
+
+  validates_presence_of :acn
+  validates_uniqueness_of :acn
+
 end
