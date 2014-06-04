@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140604132742) do
+ActiveRecord::Schema.define(version: 20140604151440) do
 
   create_table "filings", force: true do |t|
     t.integer  "stock_id"
-    t.integer  "type",       default: 0
+    t.integer  "filing_type", default: 0
     t.string   "acn"
     t.integer  "year"
     t.datetime "created_at"
