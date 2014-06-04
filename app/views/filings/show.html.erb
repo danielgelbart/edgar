@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Stock:</strong>
+  <%= @filing.stock_id %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @filing.type %>
+</p>
+
+<p>
+  <strong>Acn:</strong>
+  <%= @filing.acn %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @filing.year %>
+</p>
+
+<%= link_to 'Edit', edit_filing_path(@filing) %> |
+<%= link_to 'Back', filings_path %>

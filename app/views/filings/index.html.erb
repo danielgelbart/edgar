@@ -1,0 +1,31 @@
+<h1>Listing filings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Stock</th>
+      <th>Type</th>
+      <th>Acn</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @filings.each do |filing| %>
+      <tr>
+        <td><%= filing.stock_id %></td>
+        <td><%= filing.type %></td>
+        <td><%= filing.acn %></td>
+        <td><%= filing.year %></td>
+        <td><%= link_to 'Show', filing %></td>
+        <td><%= link_to 'Edit', edit_filing_path(filing) %></td>
+        <td><%= link_to 'Destroy', filing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Filing', new_filing_path %>

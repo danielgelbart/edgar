@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: filings
+#
+#  id         :integer          not null, primary key
+#  stock_id   :integer
+#  type       :integer          default(0)
+#  acn        :string(255)
+#  year       :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stock_id: 1
+  type: 1
+  acn: MyString
+  year: 1
+
+two:
+  stock_id: 1
+  type: 1
+  acn: MyString
+  year: 1
