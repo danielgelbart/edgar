@@ -17,6 +17,8 @@ test:
   <<: *default
   database: db/edgar_test
 
+# Production databse is on Heroku, which only use postgresql
+# Should be same in development, but just playing around for now
 production:
   adapter: postgresql
   encoding: unicode
