@@ -5,3 +5,8 @@ There are stocks with the same ciks, they are listed in duplicates.txt
 1) Check what these stocks are and why this happend
 2) correct mistackes add-hock
 3) Fix cik getter for next time
+
+
+Go daddy points to was:
+Host: @
+points to: 97.74.42.79
