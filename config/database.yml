@@ -18,6 +18,8 @@ test:
   database: db/edgar_test
 
 production:
-  <<: *default
-  database: db/edgar_pro
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
 
