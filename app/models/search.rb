@@ -17,16 +17,18 @@ class Search < ActiveRecord::Base
     lines = file.lines
     list = nil
     at_line = false
-    lines.next # get rid of first line
     lines.each do |line|
+
       if at_line == false && get_ticker(line) == ticker.strip
         cik = line.split(";")[2][/ CIK: (?<tik>.*)/,"tik"].strip
         list = AcnList.new(ticker,cik)
         at_line = true
+        next
       end
+
       if at_line
         break if line.first == "N"
-        year, acn = retrieve_acn_info
+        year, acn = retrieve_acn_info(line)
         list.add(Acn.new(year,list.cik,acn))
       end
     end
