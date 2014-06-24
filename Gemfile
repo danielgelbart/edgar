@@ -40,6 +40,6 @@ gem 'capistrano-rails', group: :development
 gem 'annotate', ">=2.6.0"
 gem 'rails_12factor', group: :production
 
-
+gem 'haml-rails'
 
 ruby "2.1.2"

@@ -1,0 +1,25 @@
+%h1 
+  = "Annual reports for #{@tenks.list.size}" 
+%table.stock-list
+  %thead
+    %th
+      Year
+    %th
+      Filing type
+    %th
+      Link
+  %tbody
+    - @tenks.list.sort{ |a,b| b.year <=> a.year }.each do |e|
+      %tr
+        %td
+          = e.year
+        %td
+          Annual Report
+        %td
+          
+
+
+
+
+
+

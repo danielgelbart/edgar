@@ -1,0 +1,20 @@
+# == Schema Information
+#
+# Table name: searches
+#
+#  id         :integer          not null, primary key
+#  filtype    :integer          default(0)
+#  ticker     :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  filtype: MyString
+  ticker: MyString
+
+two:
+  filtype: MyString
+  ticker: MyString
