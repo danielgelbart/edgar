@@ -15,6 +15,7 @@ class Search < ActiveRecord::Base
   def generate_links(ticker)
     file = File.open("accession_numbers.txt","r")
     lines = file.lines
+    lines.next # get rid of first line
     list = nil
     at_line = false
     lines.each do |line|

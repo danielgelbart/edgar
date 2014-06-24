@@ -1,11 +1,9 @@
 %h1 
-  = "Annual reports for #{@tenks.list.size}" 
+  = "Annual reports for #{@tenks.ticker}" 
 %table.stock-list
   %thead
     %th
       Year
-    %th
-      Filing type
     %th
       Link
   %tbody
@@ -15,7 +13,7 @@
           = e.year
         %td
           = link_to "Annual Report", e.url
-        %td
+
           
 
 

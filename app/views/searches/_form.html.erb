@@ -12,14 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :filtype %><br>
+    <%= f.label :file_type %>
     <%= f.text_field :filtype %>
   </div>
+  <br>
   <div class="field">
-    <%= f.label :ticker %><br>
-    <%= f.text_field :ticker %>
+    <%= f.label :ticker_symbol %>
+    <%= f.text_field :ticker, size:10 %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Get Files"%>
   </div>
 <% end %>
