@@ -15,6 +15,8 @@
 /log/*.log
 /tmp
 
+# Ignore keys
+/config/initializers/stripe.rb
 
 #Ignore weird temp files created by emacs
 *~

@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :purchases
+
+  devise_for :users
+  resources :users
+
   resources :searches
 
   resources :filings

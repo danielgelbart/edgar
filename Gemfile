@@ -42,4 +42,9 @@ gem 'rails_12factor', group: :production
 
 gem 'haml-rails'
 
+#gem 'activemerchant'
+#gem 'liquid'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'devise'
+
 ruby "2.1.2"
