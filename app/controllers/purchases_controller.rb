@@ -22,6 +22,7 @@ class PurchasesController < ApplicationController
   # POST /purchases.json
   def create
     @purchase = Purchase.new(purchase_params)
+    @item = params[:purchase]
 
     if @purchase.save_with_payment(current_user.email)
       redirect_to @purchase, :notice => "Thank you for buying!"

@@ -8,6 +8,7 @@
   = f.hidden_field :stripe_card_token 
   - if @purchase.stripe_card_token.present? 
     Credit card has been provided. 
+    This should Not be displayed if there were errors with the credit card
   - else 
     %div.field
       = label_tag :card_number, "Credit Card Number"
@@ -19,6 +20,9 @@
       = label_tag :card_month, "Card Expiration" 
       = select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"}
       = select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} 
+  %div#stripe_error
+    %noscript
+      JavaScript is not enabled and is required for this form. First enable it in your web browser settings.
 
   .actions
     = f.submit 'Buy!'
