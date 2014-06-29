@@ -17,8 +17,8 @@
         %td
           = link_to "Annual Report", e.url
         %td
-          = link_to "Buy for $ #{num += 1.0}", new_purchase_path(
-  :purchase => { :year => e.year, :ticker => e.ticker })
+          = link_to "Buy for $ #{num += 1.0}",
+  new_purchase_path(:purchase => { :acn => e.acn })
           
 
 

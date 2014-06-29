@@ -7,14 +7,11 @@ class PurchasesController < ApplicationController
     @purchases = Purchase.all
   end
 
-  # GET /purchases/1
-  # GET /purchases/1.json
-  def show
-  end
 
   # GET /purchases/new
   def new
     @purchase = Purchase.new
+    @item = params[:purchase]
   end
 
   # GET /purchases/1/edit
@@ -26,16 +23,14 @@ class PurchasesController < ApplicationController
   def create
     @purchase = Purchase.new(purchase_params)
 
-    respond_to do |format|
-      if @purchase.save
-        format.html { redirect_to @purchase, notice: 'Purchase was successfully created.' }
-        format.json { render :show, status: :created, location: @purchase }
-      else
-        format.html { render :new }
-        format.json { render json: @purchase.errors, status: :unprocessable_entity }
-      end
+    if @purchase.save_with_payment(current_user.email)
+      redirect_to @purchase, :notice => "Thank you for buying!"
+    else
+      render :new
     end
   end
+
+
 
   # PATCH/PUT /purchases/1
   # PATCH/PUT /purchases/1.json
@@ -69,6 +64,6 @@ class PurchasesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def purchase_params
-      params[:purchase]
+      params.require(:purchase).permit(:stripe_card_token)
     end
 end
