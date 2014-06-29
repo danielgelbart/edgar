@@ -17,6 +17,7 @@
 
 # Ignore keys
 /config/initializers/stripe.rb
+/config/initializers/01_stripe.rb
 
 #Ignore weird temp files created by emacs
 *~
